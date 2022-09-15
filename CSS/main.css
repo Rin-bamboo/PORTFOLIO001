@@ -9,7 +9,12 @@ header{
 }
 #header_title {
     font-size: 50px;
-  }
+}
+nav{
+}
+nav a:hover{
+    animation: rotate 0.2s linear;
+}
 main{
 }
 h1{
@@ -20,6 +25,9 @@ a:hover{
     color: rgb(214,237,248)
 }
 
+@keyframes rotate{
+    100%{ transform: rotate(360deg);}
+}
 
 @media screen and (min-width:1024px) {
     /*レスポンシブ対応PCサイズの場合は通常のメニューバー*/
