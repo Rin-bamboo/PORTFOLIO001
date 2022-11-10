@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+html{
+    /* ページの高さを最大にする */
+    height: 100%;
+}
 
 body{
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color:#e5e6f0;
