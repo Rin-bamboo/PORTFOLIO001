@@ -42,6 +42,15 @@ main{
     height: auto;
 }
 
+/* 最後のコンテンツを左寄せにする指定 */
+.flex-item:after {
+    content: "";
+    display: block;
+    width: 32%;  /* .boxに指定したwidthと同じ幅を指定する */
+    height: 0;
+    order: 1;  /* 疑似要素beforeの順番を必ず指定する*/
+}
+
 
 #header_title{
     font-family: 'Amatic SC', cursive;
