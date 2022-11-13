@@ -26,37 +26,30 @@ main{
     flex: auto;
 }
 
-.container-flex{
-    display: flex;
-    flex-flow: wrap;
-    justify-content:space-around;
-}
-.flex-item{
-    display: block;
-    width: 20%;
-    padding:10px;
-    border: 1px solid;
-}
-.flex-item img{
-    width: -moz-available;
-    height: auto;
-}
-
-/* 最後のコンテンツを左寄せにする指定 */
-.flex-item:after {
-    content: "";
-    display: block;
-    width: 32%;  /* .boxに指定したwidthと同じ幅を指定する */
-    height: 0;
-    order: 1;  /* 疑似要素beforeの順番を必ず指定する*/
-}
-
-
 #header_title{
     font-family: 'Amatic SC', cursive;
 }
 
 @media screen and (min-width:1024px) {
+    
+    /* メインのコンテンツをFlexBox表示 */
+    .container-flex{
+        display: flex;
+        flex-flow: wrap;
+        justify-content:space-around;
+    }
+    .flex-item{
+        display: block;
+        width: calc(100% / 5);
+        padding:10px;
+        margin: 5px;
+        border: 1px solid;
+    }
+    .flex-item img{
+        width: -moz-available;
+        height: auto;
+    }
+
     /*レスポンシブ対応PCサイズの場合は通常のメニューバー*/
     nav{
         display: flex;
@@ -142,7 +135,6 @@ main{
     .gnavi li a:hover::after {
         transform: scale(1, 1);/*X方向にスケール拡大*/
     }
-
         /* footerの設定 */
     footer{
         /*margin-top:auto;*/
@@ -161,10 +153,23 @@ main{
         color:inherit;
         text-decoration:none;
     }
-
 }
-@media screen and (min-width:480px){
+@media screen and (max-width: 1024px){
     /*レスポンシブ対応予定 menuをハンバーガーmenuにする*/
-    
 
+
+    /* メインのコンテンツをFlexBox表示 */
+    .container-flex{
+        display: flex;
+    }
+    .flex-item{
+        display: block;
+        width: 100%;
+        padding:10px;
+        border: 1px solid;
+    }
+    .flex-item img{
+        width: -moz-available;
+        height: auto;
+    }
 }
