@@ -46,7 +46,7 @@ main{
         border: 1px solid;
     }
     .flex-item img{
-        width: -moz-available;
+        max-width: 100%;
         height: auto;
     }
 
@@ -158,7 +158,6 @@ main{
     /* 1024以下のページへのレスポンシブ */
     /*レスポンシブ対応予定 menuをハンバーガーmenuにする*/
 
-
     /* メインのコンテンツをFlexBox表示 */
     .container-flex{
         display: flex;
@@ -167,13 +166,12 @@ main{
     .flex-item{
         display: block;
         width: 40%;
-        padding:10px;
+        padding: 10px;
         margin-left: 10px;
         border: 1px solid;
-        flex-wrap: wrap;
     }
     .flex-item img{
+        width: 40%;
         height: auto;
-        width: -moz-available;
     }
 }
