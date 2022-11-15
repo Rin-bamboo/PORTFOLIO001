@@ -162,15 +162,18 @@ main{
     /* メインのコンテンツをFlexBox表示 */
     .container-flex{
         display: flex;
+        overflow-x: auto;
     }
     .flex-item{
         display: block;
-        width: 100%;
+        width: 40%;
         padding:10px;
+        margin-left: 10px;
         border: 1px solid;
+        flex-wrap: wrap;
     }
     .flex-item img{
-        width: -moz-available;
         height: auto;
+        width: -moz-available;
     }
 }
