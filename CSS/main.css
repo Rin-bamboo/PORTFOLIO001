@@ -165,7 +165,7 @@ main{
     }
     .flex-item{
         display: block;
-        min-width: 50%;
+        min-width: 90%;
         padding: 10px;
         margin-left: 10px;
         border: 1px solid;
