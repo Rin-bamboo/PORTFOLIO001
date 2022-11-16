@@ -168,10 +168,12 @@ main{
         min-width: 90%;
         padding: 10px;
         margin-left: 10px;
+        margin-bottom: 20px;
         border: 1px solid;
     }
     .flex-item img{
-        max-width: 100%;
+        align-items: center;
+        max-width: 90%;
         height: auto;
     }
 
