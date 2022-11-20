@@ -29,8 +29,8 @@ main{
 #header_title{
     font-family: 'Amatic SC', cursive;
 }
-
-@media screen and (min-width:1024px) {
+/*PC用*/
+@media screen and (min-width:960px) {
     
     /* メインのコンテンツをFlexBox表示 */
     .container-flex{
@@ -154,7 +154,8 @@ main{
         text-decoration:none;
     }
 }
-@media screen and (max-width: 1024px){
+/*タブレット用*/
+@media screen and (max-width: 960px){
     /* 1024以下のページへのレスポンシブ */
     /*レスポンシブ対応予定 menuをハンバーガーmenuにする*/
 
@@ -164,16 +165,49 @@ main{
         overflow-x: auto;
     }
     .flex-item{
+        display: flex;
         display: block;
-        min-width: 90%;
+        min-width: 45%;
         padding: 10px;
         margin-left: 10px;
         margin-bottom: 20px;
         border: 1px solid;
     }
     .flex-item img{
-        margin-left:auto;
-        margin-right:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 90%;
+        height: auto;
+    }
+
+
+}
+/*スマホ用*/
+@media screen and (max-width: 520px){
+    /* 1024以下のページへのレスポンシブ */
+    /*レスポンシブ対応予定 menuをハンバーガーmenuにする*/
+
+    /* メインのコンテンツをFlexBox表示 */
+    .container-flex{
+        display: flex;
+        overflow-x: auto;
+    }
+    .flex-item{
+        display: flex;
+        display: block;
+        min-width: 80%;
+        padding: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        border: 1px solid;
+    }
+    .flex-item img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
         max-width: 90%;
         height: auto;
     }
