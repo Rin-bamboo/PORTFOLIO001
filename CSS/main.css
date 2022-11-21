@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
+p{
+    font-size: 16px;
+}
+
 html{
     /* ページの高さを最大にする */
     height: 100%;
@@ -28,6 +32,13 @@ main{
 
 #header_title{
     font-family: 'Amatic SC', cursive;
+}
+.flex-item ul li{
+    text-indent: -2rem;
+    list-style: none;
+}
+.profile-table{
+    margin-left:20px;
 }
 /*PC用*/
 @media screen and (min-width:1290px) {
