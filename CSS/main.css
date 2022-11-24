@@ -24,6 +24,10 @@ header{
     font-size: 50px;
 }
 nav{
+    display: flex;
+}
+.menu-ber{
+    
 }
 
 main{
@@ -60,8 +64,8 @@ footer ul a{
 }
 #skill-title2{
     margin-top:100px;
-
 }
+
 /*PC用*/
 @media screen and (min-width:1290px) {
     
@@ -169,6 +173,11 @@ footer ul a{
         transform: scale(1, 1);/*X方向にスケール拡大*/
     }
 
+    /*ハンバーガーmenuを非表示*/
+    .openbtn4{display: none;}
+
+
+
 }
 /*タブレット用*/
 @media screen and (max-width: 1290px){
@@ -201,6 +210,96 @@ footer ul a{
         height: auto;
     }
 
+    /*=============menuの表示変更===============*/
+    .gnavi{
+        position: fixed;
+        top: 50px;
+        left: 0;
+        z-index: 99;
+        width: 90%; /* 画面幅に対して */
+        height: 100%; /* 画面の高さに対して */
+        background-color: #f2f1f1;
+        transform: translateX(-110%);
+    }
+
+    #check:checked ~ nav {
+        transform: translateX(0%);
+    }
+    /*==================================================
+    　5-2-4 MENUがCLOSEに
+    ===================================*/
+
+    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+    .openbtn4{
+        position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+        background:#D54884;
+        cursor: pointer;
+        width: 50px;
+        height:50px;
+        border-radius: 5px;
+    }
+    
+    /*ボタン内側*/
+    .openbtn4 span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        position: absolute;
+        left: 14px;
+        height: 2px;
+        border-radius: 5px;
+        background: #fff;
+        width: 45%;
+        }
+    
+    
+    .openbtn4 span:nth-of-type(1) {
+        top:13px; 
+    }
+    
+    .openbtn4 span:nth-of-type(2) {
+        top:19px;
+    }
+    
+    .openbtn4 span:nth-of-type(3) {
+        top:25px;
+    }
+    
+    .openbtn4 span:nth-of-type(3)::after {
+        content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+        position: absolute;
+        top:5px;
+        left:-2px;
+        color: #fff;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+    }
+    
+    /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+    
+    .openbtn4.active span:nth-of-type(1) {
+        top: 14px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+    
+    .openbtn4.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    
+    .openbtn4.active span:nth-of-type(3){
+        top: 26px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+    
+    .openbtn4.active span:nth-of-type(3)::after {
+        content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+        transform: translateY(0) rotate(-45deg);
+        top:5px;
+        left:4px;
+    }
 
 }
 /*スマホ用*/
@@ -233,6 +332,83 @@ footer ul a{
         max-width: 90%;
         height: auto;
     }
+/*==================================================
+　5-2-4 MENUがCLOSEに
+===================================*/
 
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn4{
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    background:#D54884;
+    cursor: pointer;
+      width: 50px;
+      height:50px;
+    border-radius: 5px;
+  }
+  
+  /*ボタン内側*/
+  .openbtn4 span{
+      display: inline-block;
+      transition: all .4s;/*アニメーションの設定*/
+      position: absolute;
+      left: 14px;
+      height: 2px;
+      border-radius: 5px;
+    background: #fff;
+      width: 45%;
+    }
+  
+  
+  .openbtn4 span:nth-of-type(1) {
+    top:13px; 
+  }
+  
+  .openbtn4 span:nth-of-type(2) {
+    top:19px;
+  }
+  
+  .openbtn4 span:nth-of-type(3) {
+    top:25px;
+  }
+  
+  .openbtn4 span:nth-of-type(3)::after {
+    content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+    position: absolute;
+    top:5px;
+    left:-2px;
+    color: #fff;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+  }
+  
+  /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+  
+  .openbtn4.active span:nth-of-type(1) {
+      top: 14px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 30%;
+  }
+  
+  .openbtn4.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  .openbtn4.active span:nth-of-type(3){
+      top: 26px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 30%;
+  }
+  
+  .openbtn4.active span:nth-of-type(3)::after {
+    content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+      transform: translateY(0) rotate(-45deg);
+    top:5px;
+    left:4px;
+  }
+
+  /*=============menuの表示変更===============*/
+.gnavi{}
 
 }
