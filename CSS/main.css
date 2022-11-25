@@ -126,14 +126,14 @@ footer ul a{
         list-style: none;
     }
 
-    .gnavi li a{
+    .gnavi a{
         display: block;
         padding:0px 30px;
         text-decoration: none;
         color: #fff;
     }
 
-    .gnavi li{
+    .gnavi a li{
         margin-bottom:20px;
     }
 
@@ -141,17 +141,17 @@ footer ul a{
     　5-3-1 中心から外に線が伸びる（下部）
     ===================================*/
 
-    .gnavi li a{
+    .gnavi a li{
         /*線の基点とするためrelativeを指定*/
         position: relative;
     }
 
-    .gnavi li.current a,
-    .gnavi li a:hover{
+    .gnavi a li.current,
+    .gnavi a li:hover{
         color:#a25004;
     }
 
-    .gnavi li a::after {
+    .gnavi a li::after{
         content: '';
         /*絶対配置で線の位置を決める*/
         position: absolute;
@@ -168,36 +168,67 @@ footer ul a{
     }
 
     /*現在地とhoverの設定*/
-    .gnavi li.current a::after,
-    .gnavi li a:hover::after {
+    .gnavi a li.current::after,
+    .gnavi a li:hover::after {
         transform: scale(1, 1);/*X方向にスケール拡大*/
     }
 
     /*ハンバーガーmenuを非表示*/
     .openbtn4{display: none;}
-
-
-
 }
 /*タブレット用*/
 @media screen and (max-width: 1290px){
     /* 1024以下のページへのレスポンシブ */
+    /*=============menuの表示変更===============*/
+    .gnavi{
+        position: fixed;
+        left: 0;
+        width: 80%; /* 画面幅に対して */
+        height: 100%; /* 画面の高さに対して */
+        background-color: #f2f1f1;
+        transform: translateX(-110%);
+        padding:0;
+        margin:0;
+    }
+    .gnavi.show {
+        max-width: 100%;
+        background:rgba(255,255,255,0.9);
+        transform: translate(12.5%);
+    }
+    ul.gnavi{
+
+    }
+    ul.gnavi a{
+        text-decoration:none;
+    }
+    ul.gnavi li{
+        font-size: 20px;
+        margin-top: 10px;
+        list-style: none;
+    }
+    ul.gnavi li:hover{
+        color: #fff;
+        background:#a25004;
+    }
+
     nav{
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         width: 100%;
-        hight:auto;
+        height:auto;
         box-sizing: border-box;
         position: relative;
     }
     nav img{
-        width: auto;
+        text-align: center;
+        height: 100%;
         position: absolute;
         top: 0px;
         left: 0px;
     }
+
     /*レスポンシブ対応予定 menuをハンバーガーmenuにする*/
-    .title_logo{
+    /*.title_logo{
         width: 40%;
 
     }
@@ -224,21 +255,7 @@ footer ul a{
         height: auto;
     }
 
-    /*=============menuの表示変更===============*/
-    .gnavi{
-        position: fixed;
-        top: 50px;
-        left: 0;
-        z-index: 99;
-        width: 90%; /* 画面幅に対して */
-        height: 100%; /* 画面の高さに対して */
-        background-color: #f2f1f1;
-        transform: translateX(-110%);
-    }
 
-    #check:checked ~ nav {
-        transform: translateX(0%);
-    }
     /*==================================================
     　5-2-4 MENUがCLOSEに
     ===================================*/
@@ -255,7 +272,6 @@ footer ul a{
     
     /*ボタン内側*/
     .openbtn4 span{
-
         display: inline-block;
         transition: all .4s;/*アニメーションの設定*/
         position: absolute;
