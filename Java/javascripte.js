@@ -5,4 +5,3 @@ $(".openbtn4").click(function () {
 $('.openbtn4').on('click', function () {
     $('.openbtn4, .gnavi').toggleClass('show');
   });
-  
