@@ -66,6 +66,11 @@ footer ul a{
     margin-top:100px;
 }
 
+.work-preparation{
+    text-align:center;
+    width: 70%;
+}
+
 /*PC用*/
 @media screen and (min-width:1290px) {
     
