@@ -70,7 +70,9 @@ footer ul a{
     text-align:center;
     width: 70%;
 }
-
+.contents-box{
+    text-align:center;
+}
 /*PC用*/
 @media screen and (min-width:1290px) {
     
