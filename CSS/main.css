@@ -193,6 +193,11 @@ footer ul a{
 
     /*ハンバーガーmenuを非表示*/
     .openbtn4{display: none;}
+
+    /*iframe対応*/
+    iframe{
+        height: 500px;
+    }
 }
 /*タブレット用*/
 @media screen and (max-width: 1290px){
