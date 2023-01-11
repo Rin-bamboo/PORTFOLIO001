@@ -92,6 +92,17 @@ footer ul a{
         height: auto;
     }
 
+    .container-contact-flex{
+        display: flex;
+        flex-flow: wrap;
+        justify-content:space-around;
+    }
+    .contact-flex-item{
+        display: block;
+        /*width: calc(100% / 3);*/
+        padding:10px;
+        margin: 5px;
+    }
     /*レスポンシブ対応PCサイズの場合は通常のメニューバー*/
     nav{
         display: flex;
