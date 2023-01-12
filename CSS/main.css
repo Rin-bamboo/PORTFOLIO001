@@ -70,6 +70,13 @@ footer ul a{
     text-align:center;
     width: 70%;
 }
+.contents-box{
+    text-align:center;
+}
+/*iframe対応*/
+iframe{
+    height: 441px;
+}
 
 /*PC用*/
 @media screen and (min-width:1290px) {
@@ -191,6 +198,8 @@ footer ul a{
 
     /*ハンバーガーmenuを非表示*/
     .openbtn4{display: none;}
+
+
 }
 /*タブレット用*/
 @media screen and (max-width: 1290px){
