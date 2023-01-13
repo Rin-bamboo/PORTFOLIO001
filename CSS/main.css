@@ -14,8 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color:#e5e6f0;
-    margin-left:10%;
-    margin-right: 10%;
+
 }
 header{
 }
@@ -32,6 +31,8 @@ nav{
 
 main{
     flex: auto;
+    margin-left:10%;
+    margin-right: 10%;
 }
 
 #header_title{
