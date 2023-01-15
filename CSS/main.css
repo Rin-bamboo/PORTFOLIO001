@@ -423,6 +423,31 @@ ul.slider{
         height: auto;
     }
 
+    .index-container-flex{
+        display: flex;
+        flex-flow: wrap;
+        justify-content:space-around;
+    }
+    .index-flex-item{
+        display: block;
+        width: calc(100%);
+        padding:10px;
+        margin: 5px;
+    }
+    .index-flex-item img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .slider {
+        position:relative;
+        z-index: 1;
+        /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+        height: 300px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    }
+    .slider-item {
+        height:300px;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    }
 
     /*==================================================
     　5-2-4 MENUがCLOSEに
