@@ -14,7 +14,8 @@ body{
     display: flex;
     flex-direction: column;
     background-color:#e5e6f0;
-
+    margin-left:10%;
+    margin-right: 10%;
 }
 header{
 }
@@ -31,8 +32,7 @@ nav{
 
 main{
     flex: auto;
-    margin-left:10%;
-    margin-right: 10%;
+
 }
 
 #header_title{
@@ -196,7 +196,9 @@ ul.slider{
 .slick-dots .slick-active button{
     background:#333;/*ドットボタンの現在地表示の色*/
 }
-
+#index-h2{
+    text-align:center;
+}
 
 /*PC用*/
 @media screen and (min-width:1290px) {
@@ -229,6 +231,22 @@ ul.slider{
         /*width: calc(100% / 3);*/
         padding:10px;
         margin: 5px;
+    }
+
+    .index-container-flex{
+        display: flex;
+        flex-flow: wrap;
+        justify-content:space-around;
+    }
+    .index-flex-item{
+        display: block;
+        width: calc(100% / 5);
+        padding:10px;
+        margin: 5px;
+    }
+    .index-flex-item img{
+        max-width: 100%;
+        height: auto;
     }
     /*レスポンシブ対応PCサイズの場合は通常のメニューバー*/
     nav{
