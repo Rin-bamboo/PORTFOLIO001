@@ -199,6 +199,9 @@ ul.slider{
 #index-h2{
     text-align:center;
 }
+.google-contact{
+    text-align:center;
+}
 
 /*PC用*/
 @media screen and (min-width:1290px) {
