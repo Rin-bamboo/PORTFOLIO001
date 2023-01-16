@@ -443,7 +443,7 @@ ul.slider{
         position:relative;
         z-index: 1;
         /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
-        height: 300px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+        height: 500px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
     }
     .slider-item {
         height:500px;/*各スライダー全体の縦幅を画面の高さを変更*/
