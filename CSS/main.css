@@ -26,7 +26,6 @@ header{
 nav{
     display: flex;
 }
-
 .menu-ber{
     text-align: center;
 }
@@ -444,10 +443,10 @@ ul.slider{
         position:relative;
         z-index: 1;
         /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
-        height: 500px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+        height: 300px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
     }
     .slider-item {
-        height:500px;/*各スライダー全体の縦幅を画面の高さを変更*/
+        height:300px;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
     }
 
     /*==================================================
@@ -459,8 +458,8 @@ ul.slider{
         position: relative;/*ボタン内側の基点となるためrelativeを指定*/
         background:#c07820;
         cursor: pointer;
-        width: 50px;
-        height:50px;
+        width: 70px;
+        height:70px;
         border-radius: 5px;
     }
     
@@ -469,28 +468,28 @@ ul.slider{
         display: inline-block;
         transition: all .4s;/*アニメーションの設定*/
         position: absolute;
-        left: 14px;
-        height: 2px;
-        border-radius: 5px;
+        left: 19.25px;
+        height: 5px;
+        border-radius: 3px;
         background: #fff;
         width: 45%;
     }
 
     .openbtn4 span:nth-of-type(1) {
-        top:13px; 
+        top:17px; 
     }
     .openbtn4 span:nth-of-type(2) {
-        top:19px;
+        top:27px;
     }
     .openbtn4 span:nth-of-type(3) {
-        top:25px;
+        top:37px;
     }
 
     .openbtn4 span:nth-of-type(3)::after {
         content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
         position: absolute;
-        top:5px;
-        left:-2px;
+        top:8px;
+        left:1px;
         color: #fff;
         font-size: 0.6rem;
         text-transform: uppercase;
@@ -499,10 +498,10 @@ ul.slider{
     /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
     
     .openbtn4.active span:nth-of-type(1) {
-        top: 14px;
-        left: 18px;
+        top: 23px;
+        left: 19.25px;
         transform: translateY(6px) rotate(-45deg);
-        width: 30%;
+        width: 50%;
     }
     
     .openbtn4.active span:nth-of-type(2) {
@@ -510,17 +509,17 @@ ul.slider{
     }
     
     .openbtn4.active span:nth-of-type(3){
-        top: 26px;
-        left: 18px;
+        top: 35px;
+        left: 19.25px;
         transform: translateY(-6px) rotate(45deg);
-        width: 30%;
+        width: 50%;
     }
     
     .openbtn4.active span:nth-of-type(3)::after {
         content:"Close";/*3つ目の要素のafterにClose表示を指定*/
         transform: translateY(0) rotate(-45deg);
-        top:5px;
-        left:4px;
+        top:13px;
+        left:19.25px;
     }
 
 }
