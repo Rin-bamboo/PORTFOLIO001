@@ -7,6 +7,7 @@ p{
 html{
     /* ページの高さを最大にする */
     height: 100%;
+    font-family:"SF Pro JP", "SF Pro Display", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body{
@@ -26,7 +27,6 @@ header{
 nav{
     display: flex;
 }
-
 .menu-ber{
     text-align: center;
 }
@@ -102,7 +102,7 @@ iframe{
     opacity: 0.9;
     color:#ccc;
     position: absolute;
-    z-index: 2;
+    z-index: 102;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -118,7 +118,7 @@ ul.slider{
 }
 .slider {
     position:relative;
-	z-index: 1;
+	z-index: 101;
 	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
 	height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
 }
@@ -150,7 +150,7 @@ ul.slider{
 .slick-prev, 
 .slick-next {
     position: absolute;/*絶対配置にする*/
-	z-index: 3;
+	z-index: 103;
     top: 42%;
     cursor: pointer;/*マウスカーソルを指マークに*/
     outline: none;/*クリックをしたら出てくる枠線を消す*/
@@ -174,7 +174,7 @@ ul.slider{
 
 .slick-dots {
 	position: relative;
-	z-index: 3;
+	z-index: 103;
     text-align:center;
 	margin:-50px 0 0 0;
 }
@@ -197,12 +197,23 @@ ul.slider{
 .slick-dots .slick-active button{
     background:#333;/*ドットボタンの現在地表示の色*/
 }
-#index-h2{
+.index-h2{
     text-align:center;
+    font-size: 60px;
 }
 .google-contact{
     text-align:center;
 }
+
+.nav-index{
+    position:relative;
+    z-index:1;
+}
+.main-index{
+    position:relative;
+    z-index:0;
+}
+
 
 /*PC用*/
 @media screen and (min-width:1290px) {
@@ -372,6 +383,7 @@ ul.slider{
     }
     ul.gnavi li{
         font-size: 55px;
+        font-family:Muyao-Softbrush;
         margin-top: 10px;
         list-style: none;
     }
@@ -442,12 +454,12 @@ ul.slider{
 
     .slider {
         position:relative;
-        z-index: 1;
+        z-index: 101;
         /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
-        height: 500px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+        height: 300px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
     }
     .slider-item {
-        height:500px;/*各スライダー全体の縦幅を画面の高さを変更*/
+        height:300px;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
     }
 
     /*==================================================
@@ -459,8 +471,8 @@ ul.slider{
         position: relative;/*ボタン内側の基点となるためrelativeを指定*/
         background:#c07820;
         cursor: pointer;
-        width: 50px;
-        height:50px;
+        width: 70px;
+        height:70px;
         border-radius: 5px;
     }
     
@@ -469,28 +481,28 @@ ul.slider{
         display: inline-block;
         transition: all .4s;/*アニメーションの設定*/
         position: absolute;
-        left: 14px;
-        height: 2px;
-        border-radius: 5px;
+        left: 19.25px;
+        height: 5px;
+        border-radius: 3px;
         background: #fff;
         width: 45%;
     }
 
     .openbtn4 span:nth-of-type(1) {
-        top:13px; 
+        top:17px; 
     }
     .openbtn4 span:nth-of-type(2) {
-        top:19px;
+        top:27px;
     }
     .openbtn4 span:nth-of-type(3) {
-        top:25px;
+        top:37px;
     }
 
     .openbtn4 span:nth-of-type(3)::after {
         content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
         position: absolute;
-        top:5px;
-        left:-2px;
+        top:8px;
+        left:1px;
         color: #fff;
         font-size: 0.6rem;
         text-transform: uppercase;
@@ -499,10 +511,10 @@ ul.slider{
     /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
     
     .openbtn4.active span:nth-of-type(1) {
-        top: 14px;
-        left: 18px;
+        top: 23px;
+        left: 19.25px;
         transform: translateY(6px) rotate(-45deg);
-        width: 30%;
+        width: 50%;
     }
     
     .openbtn4.active span:nth-of-type(2) {
@@ -510,17 +522,17 @@ ul.slider{
     }
     
     .openbtn4.active span:nth-of-type(3){
-        top: 26px;
-        left: 18px;
+        top: 35px;
+        left: 19.25px;
         transform: translateY(-6px) rotate(45deg);
-        width: 30%;
+        width: 50%;
     }
     
     .openbtn4.active span:nth-of-type(3)::after {
         content:"Close";/*3つ目の要素のafterにClose表示を指定*/
         transform: translateY(0) rotate(-45deg);
-        top:5px;
-        left:4px;
+        top:13px;
+        left:19.25px;
     }
 
 }
