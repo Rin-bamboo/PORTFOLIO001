@@ -46,7 +46,7 @@ main{
 .profile-flex{
     display:flex;
 }
-profile-item{
+.profile-item{
     width:200px;
 }
 .profile-table{
