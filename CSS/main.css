@@ -43,9 +43,17 @@ main{
     text-indent: -2rem;
     list-style: none;
 }
+.profile-flex{
+    display:flex;
+}
+profile-item{
+    width:200px;
+}
 .profile-table{
     margin-left:20px;
-    display:inline;
+}
+.profile-img{
+    width:200px;
 }
 .top-img1{
     width:100%;
@@ -84,11 +92,6 @@ footer ul a{
 iframe{
     height: 441px;
 }
-.profile-img{
-    width:200px;
-    display:inline;
-}
-
 
 /*==================================================
 スライダーのためのcss
