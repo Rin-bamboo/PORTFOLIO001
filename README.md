@@ -1,5 +1,5 @@
 # PORTFOLIO001
 ポートフォリオサイトの作成
 
-AWSリンク
-http://bambooportfolio.s3-website-ap-northeast-1.amazonaws.com/
+公開URL
+https://rin-bamboo.github.io/PORTFOLIO001/contact.html
