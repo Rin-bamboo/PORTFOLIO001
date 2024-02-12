@@ -1,0 +1,25 @@
+# OS 生成ファイルを無視する
+.DS_Store
+Thumbs.db
+
+# キャッシュや一時ファイルを無視する
+node_modules/
+*.log
+*.tmp
+
+# ビルドされたファイルを無視する
+dist/
+build/
+
+# 依存関係の管理されたファイルを無視する
+package-lock.json
+yarn.lock
+
+# IDEやエディタの設定を無視する
+.vscode/
+.idea/
+
+# 任意のプロジェクト固有の設定やファイルを無視する
+# 例: プロジェクトに応じて設定
+config.json
+secrets.yml
