@@ -23,3 +23,6 @@ yarn.lock
 # 例: プロジェクトに応じて設定
 config.json
 secrets.yml
+
+#VSファイル
+.vs/
