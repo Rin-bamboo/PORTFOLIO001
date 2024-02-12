@@ -360,6 +360,14 @@ ul.slider{
 /*タブレット用*/
 @media screen and (max-width: 1290px){
     /* 1024以下のページへのレスポンシブ */
+    body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #e5e6f0;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
     /*=============menuの表示変更===============*/
     .gnavi{
         transition: all .3s;
@@ -542,6 +550,14 @@ ul.slider{
 /*スマホ用*/
 @media screen and (max-width: 520px){
     /* 1024以下のページへのレスポンシブ */
+    body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #e5e6f0;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
     /*レスポンシブ対応予定 menuをハンバーガーmenuにする*/
     .title_logo{
         width: 40%;
